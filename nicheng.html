@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+   <link rel="stylesheet" href="css/font.css" />
+   <link rel="stylesheet" href="css/center.css" />
+    <script type="text/javascript" src="js/jquery.js" ></script>
+</head>
+<body>
+	<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>修改昵称</h1>
+	<div class="hang">
+		<textarea id="content" name="coontent"
+			placeholder="请输入昵称"></textarea>
+		<div id="length-note">
+			<label id="now-length">10</label>/<span class="big">10</span> 
+		</div>
+	</div>
+	<a class="tiijiao1" href="#" id="sub" >保存</a>
+	<script>
+//	var maxlength = 10;
+//	$("#content").keyup(function(){
+//		var leng = maxlength - $(".content").val().length;
+//		console.log($(".content").val().length)
+//		if (leng < 0) {
+//			$("#now-length").css("color","red");
+//			$("#sub").disabled = true;
+//		} else{
+//			if (leng <= 10) {
+//				$("#sub").disabled = false;
+//			} else {
+//				$("#sub").disabled = true;
+//			}
+//			$("#now-length").css("color","#aaa");
+//		}
+//		$("#now-length").html(leng);
+//	})
+		
+	var content = document.getElementById("content");
+	var nowlength = document.getElementById("now-length");
+	var sub = document.getElementById("sub");
+	var titlenote = document.getElementById("title-note");
+	var maxlength = 10;
+	function checkTextLength() {
+		var nowlen = maxlength - content.value.length;
+		if (nowlen < 0) {
+			nowlength.style.color = "red";
+			sub.disabled = true;
+		} else {
+			if (nowlen <= 10) {
+				sub.disabled = false;
+			} else {
+				sub.disabled = true;
+			}
+			nowlength.style.color = "#aaa";
+		}
+		nowlength.innerHTML = nowlen;
+	}
+
+	function checkTitle() {
+		var nowlen = maxlength - content.value.length;
+
+		if (nowlen <= 10) {
+			sub.disabled = false;
+		}
+		titlenote.innerHTML = "";
+	}
+
+	content.onkeyup = checkTextLength;
+
+
+</script>
+</body>
+</html>

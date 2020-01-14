@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/center.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+     <script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    	.h1{background: none;}
+    	.tiijiao1{background: #FFFFFF;margin-top: 10% !important;color: #333333 !important;letter-spacing: 3px;font-size: 16px;font-weight: bold;}
+    </style>
+</head>
+<body style="width: 100vw;height: 100vh;background:url(img/images/qr_bg.png) no-repeat;background-size: 100% 100%;">
+	<h1 class="h1"><button class="diu iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>邀请好友</h1>
+	<div class="qr_box">
+		<img src="img/images/logo.png" class="qr_logo"/>
+		<p class="qr_title">全球一体化的消费生态链</p>
+		<p class="qr_title">聚合式AI平台</p>
+		<div id="code" style="margin: 10% auto 5%;text-align: center;"></div>
+		<div class="yzm">
+			<span class="code_title">邀请码：</span>
+			<span id="v_code">454545</span>
+			<span id="code_btn" data-clipboard-target="#v_code">复制</span>
+		</div>
+		<a class="tiijiao1" href="#" id="sub" >立即邀请好友</a>
+	</div>
+	<script type="text/javascript">
+			$("#code").qrcode({
+   			    width: 180, //宽度 
+    			height:180, //高度 
+    			text: "www.zhizuobiao.com" //任意内容 
+			});
+			
+			$('canvas').css({
+		        'position':'relative',
+		        'top':'5vh',
+		        'margin-bottom':'6vh',
+		        'padding':'10px',
+		        'background': '#fff',
+		    });
+		    
+		    var clipboard=new Clipboard("#code_btn");
+				clipboard.on("success",function(e){
+					layer.msg("复制成功",{ icon: 1,time: 2000});
+				})
+	</script>
+</body>
+</html>

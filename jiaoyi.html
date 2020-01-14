@@ -1,0 +1,431 @@
+ <!DOCTYPE html>
+<html ng-app="Mywind">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/center.css" />
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="js/public.js" ></script>
+    <script type="text/javascript" src="js/tab_wo.js" ></script>
+    <script src="js/leftTime.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js" ></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js" ></script>
+	<script type="text/javascript" src="js/angular-relst.js" ></script>
+    <style>
+    	.tab-title a{width: 50%;display:block;text-align: center;float: left;padding:5px 0;color: #fff;border:1px solid #FFFFFF;box-sizing: border-box;}
+    	.tab-title{overflow: hidden;width: 60%;margin: auto;padding: 10px 0;}
+    	.item-cur{background: #fff !important;color: #1E2134 !important;}
+    	.rrsss{background: #1E2134;border-bottom: 1px solid #e6e6e6;}
+    	.tab-title a:nth-child(1){border-radius: 25px 0 0 25px;}
+    	.tab-title a:nth-child(2){border-radius: 0 25px 25px 0 ;}
+    	.navTitle{color: #333333 !important;font-weight: bold;}
+	.bottom_nav dl dd:nth-child(3) a .dier{display: block !important;}
+	.bottom_nav dl dd:nth-child(3) a .diyi{display: none !important;}
+	.bottom_nav dl dd:nth-child(3) a span{color: #09F4B4;}
+	.hang_h1{margin-top: 20px;}
+    </style>
+</head>
+<body >
+	
+	<div class="record">
+		<div class="tab" js-tab="1">
+			<div class="rrsss">
+				<div class="tab-title">
+					<a href="javascript:;" class="item">买入</a>
+	  				<a href="javascript:;" class="item">卖出</a>
+	  				<!--<div ><button ui-sref="detail" onclick="javascrtpt:window.location.href='dianpu_order.html'" class="wocao goumaijilu">订单</button></div>-->
+				</div>
+			</div>
+			<div class="dingdan tab-cont">
+				<div class="tab-cont_wrap">
+					<div class="item">
+						<div class="di_tpo">
+							<p class="navTitle">CPC</p>
+							<p>AIB</p>
+						</div>
+						<div class="nav">
+							<div class="nav_box">
+								<div class="cpc_box">
+									<div class="cpc_left">
+										<p>可用资产(CPC)</p>
+										<p><b class="usd">100.26545</b>USDT</p>
+										<p><span>24H交易</span><b class="jy">4545.4545</b>CPC</p>
+										<p><span>市价</span><b class="jy">0.15</b>USDT/CPC</p>
+									</div>
+									<div class="cpc_right">
+										<a href="fabu_notice.html">
+											<p>
+												<img src="img/images/jia_1.png"/>
+												<span class="">发布公告</span>
+											</p>
+										</a>	
+										<a href="my_list.html">
+											<p>
+												<img src="img/images/jia_2.png"/>
+												<span class="">我的挂单</span>
+											</p>
+										</a>	
+										<a href="order_record.html">
+											<p>
+												<img src="img/images/jia_3.png"/>
+												<span class="">订单记录</span>
+											</p>
+										</a>	
+									</div>
+								</div>
+								
+								<div class="xl">
+									<span class="jydt">交易大厅</span>
+									<span id="select">
+										<span>排序</span><img src="img/images/selct.png"/>
+									</span>
+								</div>
+								
+								<div class="jy_box">
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buy_CPC.html" class="pai_btn">买入</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(CPC)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buy_CPC.html" class="pai_btn">买入</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(CPC)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buy_CPC.html" class="pai_btn">买入</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(CPC)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buy_CPC.html" class="pai_btn">买入</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(CPC)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+								</div>	
+								
+							</div>
+							<div class="nav_box two">
+								<div class="aib_box">
+									<div class="aib_left">
+										<p>可用资产(AIB)</p>
+										<p><b class="usd">100.26545</b>USDT</p>
+										<p><span>24H交易</span><b class="jy">4545.4545</b>AIB</p>
+										<p><span>市价</span><b class="jy">0.15</b>USDT/AIB</p>
+									</div>
+									<div class="aib_right">
+										<a href="fabu_notice.html">
+											<p>
+												<img src="img/images/jia_1.png"/>
+												<span class="">发布公告</span>
+											</p>
+										</a>	
+										<a href="my_list.html">
+											<p>
+												<img src="img/images/jia_2.png"/>
+												<span class="">我的挂单</span>
+											</p>
+										</a>	
+										<a href="order_record.html">
+											<p>
+												<img src="img/images/jia_3.png"/>
+												<span class="">订单记录</span>
+											</p>
+										</a>	
+									</div>
+								</div>
+								
+								<div class="xl">
+									<span class="jydt">交易大厅</span>
+									<span id="select">
+										<span>排序</span><img src="img/images/selct.png"/>
+									</span>
+								</div>
+								
+								<div class="jy_box">
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buy_CPC.html" class="pai_btn">买入</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(AIB)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buy_CPC.html" class="pai_btn">买入</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(AIB)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+								</div>	
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="item">
+						<div class="di_tpo">
+							<p class="navTitle">CPC</p>
+							<p>AIB</p>
+						</div>
+						<div class="nav">
+							<div class="nav_box">
+								<div class="cpc_box">
+									<div class="cpc_left">
+										<p>可用资产(CPC)</p>
+										<p><b class="usd">100.26545</b>USDT</p>
+										<p><span>24H交易</span><b class="jy">4545.4545</b>CPC</p>
+										<p><span>市价</span><b class="jy">0.15</b>USDT/CPC</p>
+									</div>
+									<div class="cpc_right">
+										<a href="fabu_notice.html">
+											<p>
+												<img src="img/images/jia_1.png"/>
+												<span class="">发布公告</span>
+											</p>
+										</a>	
+										<a href="my_list.html">
+											<p>
+												<img src="img/images/jia_2.png"/>
+												<span class="">我的挂单</span>
+											</p>
+										</a>	
+										<a href="order_record.html">
+											<p>
+												<img src="img/images/jia_3.png"/>
+												<span class="">订单记录</span>
+											</p>
+										</a>	
+									</div>
+								</div>
+								
+								<div class="xl">
+									<span class="jydt">交易大厅</span>
+									<span id="select">
+										<span>排序</span><img src="img/images/selct.png"/>
+									</span>
+								</div>
+								
+								<div class="jy_box">
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buyOut_CPC.html" class="pai_btn">卖出</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(CPC)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+								</div>	
+								
+							</div>
+							<div class="nav_box two">
+								<div class="aib_box">
+									<div class="aib_left">
+										<p>可用资产(AIB)</p>
+										<p><b class="usd">100.26545</b>USDT</p>
+										<p><span>24H交易</span><b class="jy">4545.4545</b>AIB</p>
+										<p><span>市价</span><b class="jy">0.15</b>USDT/AIB</p>
+									</div>
+									<div class="aib_right">
+										<a href="fabu_notice.html">
+											<p>
+												<img src="img/images/jia_1.png"/>
+												<span class="">发布公告</span>
+											</p>
+										</a>	
+										<a href="my_list.html">
+											<p>
+												<img src="img/images/jia_2.png"/>
+												<span class="">我的挂单</span>
+											</p>
+										</a>	
+										<a href="order_record.html">
+											<p>
+												<img src="img/images/jia_3.png"/>
+												<span class="">订单记录</span>
+											</p>
+										</a>	
+									</div>
+								</div>
+								
+								<div class="xl">
+									<span class="jydt">交易大厅</span>
+									<span id="select">
+										<span>排序</span><img src="img/images/selct.png"/>
+									</span>
+								</div>
+								
+								<div class="jy_box">
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buyOut_CPC.html" class="pai_btn">卖出</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(AIB)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+									<div class="pai_box">
+										<div class="pai_top">
+											<span class="time_box">
+												<img src="img/images/tou.png" class="time"/>
+												15445654565
+											</span>
+											<a href="buyOut_CPC.html" class="pai_btn">卖出</a>
+										</div>
+										<div class="pai_bottom">
+											<div class="">
+												<p class="pai_zi">出售数量&nbsp;&nbsp;&nbsp;(AIB)</p>
+												<p class="pai_title">6845448.00</p>
+											</div>
+											<div class="">
+												<p class="pai_zi">单价(USDT)</p>
+												<p class="pai_title">0.150000</p>
+											</div>
+										</div>
+									</div>
+								</div>	
+								
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wowocao">
+		<div ui-view ng-hide="myCheck" class="fade"></div>
+	</div>
+	<div id="footer"></div>
+	
+	<script>
+	$(".wocao").click(function(){
+        $("#wowocao").css({"position":"absolute","right":"0px"});
+    })
+	$(function(){
+	  $('[js-tab=1]').tab();
+	
+	});
+	function wozhidao(){
+		$(".ymtkg").hide()
+	}
+	function guizea(){
+		$(".ymtkg").show()
+	}
+
+	var $div_li = $('.di_tpo p');
+        $('.di_tpo p').click(function(){
+            $(this).addClass("navTitle").siblings().removeClass("navTitle"); 
+                var index =  $div_li.index(this);  
+            $("div.nav > div").eq(index).show().siblings().hide(); 
+		})	
+</script>
+
+</body>
+</html>

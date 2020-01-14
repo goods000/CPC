@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/center.css" />
+	<link rel="stylesheet" href="css/font.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body style="background: #fff;">
+	<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>身份认证</h1>
+	<div class="hang">
+		<p class="p_title">基本信息</p>
+		<div class="div a">
+			<input type="number" placeholder="请输入验证码" name="" id="" value="" />
+		</div>
+		<div class="div">
+			<input type="number" placeholder="请输入身份证号码" name="" id="" value="" />
+		</div>
+		
+		<div class="yzImg">
+			<div class="line">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a href="javascript:;" class="a-upload">
+					<input type="file" name="file1" id="xdaTanFileImg_1" onchange="xmTanUploadImg_1(this)" accept="image/*" />
+					<i><img style="width: 100%;display:block;" id="xmTanImg_1"/></i>
+					<div style="width: 80px;height: 80px;" id="xmTanDiv_1"></div>
+					<span class="yz_title">上传身份证正面照片</span>
+				</a>
+			</div>	
+		</div>
+		
+		<div class="yzImg">
+			<div class="line">
+				<input type="hidden" id="uploadOrderid" name="id" value="">
+				<a href="javascript:;" class="a-upload">
+					<input type="file" name="file1" id="xdaTanFileImg_2" onchange="xmTanUploadImg_2(this)" accept="image/*" />
+					<i><img style="width: 100%;display:block;" id="xmTanImg_2"/></i>
+					<div style="width: 80px;height: 80px;" id="xmTanDiv_2"></div>
+					<span class="yz_title1">上传身份证反面照片</span>
+				</a>
+			</div>
+		</div>
+		
+	</div>
+		<input type="button" name="btn_s" id="btn_s" value="身份认证" />
+		
+	<div id="mo">
+		<div class="sm_box">
+			<p>提币确认</p>
+			<p>为保证用户交易安全，请先完成身份认证</p>
+			<div class="btn_w">
+				<span class="qu">取消</span>
+				<span class="renz">认证</span>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/Zcheck.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function xmTanUploadImg_1(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			//读取文件过程方法
+			reader.onload = function (e) {
+			var size = file.size/1024;
+			var size = size/1024;
+			if (size>4) {
+			alert('上传图片不能超过4MB，请重新选择！');return false;
+			}
+			var img = document.getElementById("xmTanImg_1");
+			img.src = e.target.result;
+			$(".yz_title").hide()
+			//或者 img.src = this.result; //e.target == this
+			}
+			reader.readAsDataURL(file)
+		}
+		function xmTanUploadImg_2(obj) {
+	        var file = obj.files[0];
+			console.log(obj);console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			//读取文件过程方法
+			reader.onload = function (e) {
+			var size = file.size/1024;
+			var size = size/1024;
+			if (size>4) {
+			alert('上传图片不能超过4MB，请重新选择！');return false;
+			}
+			var img = document.getElementById("xmTanImg_2");
+			img.src = e.target.result;
+			$(".yz_title1").hide()
+			//或者 img.src = this.result; //e.target == this
+			}
+			reader.readAsDataURL(file)
+		}
+		
+		$("#btn_s").click(function(){
+			$("#mo").css("display","block");
+			$("#mo").css("display","flex");
+		})
+		$(".qu").click(function(){
+			$("#mo").css("display","none");
+		})	
+	</script>
+</body>
+</html>

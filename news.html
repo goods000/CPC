@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<body style="background: #fff;">
+		<h1 class="h1"><button class="diu iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>消息中心</h1>
+		<div class="news">
+			<h1>CPC上线通知</h1>
+			<span>2019-12-30</span>
+			<p>CPC今天正式上线！CPC今天正式上线！CPC今天正式上线！CPC今天正式上线！CPC今天正式上线！CPC今天正式上线！CPC今天正式上线！</p>
+			
+		</div>
+		<div id="wowocao">
+			<div ui-view ng-hide="myCheck" class="fade"></div>
+		</div>
+		<script>
+            	$(".wocao").click(function(){
+            		$("#wowocao").css({"position":"absolute","right":"0px"});
+            	})
+            </script>
+	</body>
+</html>

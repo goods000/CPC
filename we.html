@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/center.css" />
+		<link rel="stylesheet" href="css/font.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.h1{background: none;}
+			.colount_nav ul li{padding: 0 5%;}
+			.colount_nav ul li a{padding: 5% 0;}
+			.colount_nav ul li a u{margin-left:0px;}
+			.colount_nav ul li a i{margin-right:0px;}
+			.colount_nav ul li:nth-child(4) a{border-bottom: none;}
+		</style>
+	</head>
+	<body>
+		<div style="width:100vw;overflow: hidden;">
+			<div class="we_index1">
+				<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+					<!--<span class="jisu_bt">关于我们</span>-->
+				</h1>
+				<div class="we_title">
+					<img src="img/images/logo.png"/>
+					<p class="">CPC</p>
+					<p class=""><span class="">V1.0.0</span></p>
+				</div>
+			</div>
+			<div class="colount_nav">
+				<ul>
+					<li><a href="#" ><u>CPC白皮书</u><i class="iconfont icon-gengduo1"></i></a></li>
+					<li><a href="#" ><u>用户协议</u><i class="iconfont icon-gengduo1"></i></a></li>
+					<li><a href="#" ><u>CPC官网</u><i class="iconfont icon-gengduo1"></i></a></li>
+					<li><a href="#" ><u>客服邮箱</u><span class="ren_email">kefu@136.com</span><i><img src="img/images/youx.png" class="youx" data-clipboard-target=".ren_box"/></i></a></li>
+					<li class="chat">
+						<u>官方公众号</u>
+						<div id="code" style="margin: 10% auto 3%;text-align: center;"></div>
+						<p class="chat_g">微信公众号 -- CPC</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script src="js/jquery.i18n.properties.min.js"></script>
+<script src="js/language.js"></script>
+<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+	$("#code").qrcode({
+   		width: 110, //宽度 
+    	height:110, //高度 
+    	text: "www.zhizuobiao.com" //任意内容 
+	});
+			
+	 var clipboard=new Clipboard(".youx");
+		clipboard.on("success",function(e){
+			layer.msg("复制成功",{ icon: 1,time: 2000});
+	})		
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" href="css/center.css" />
+		<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<style type="text/css">
+		.a{border-bottom: 1px solid #eee;}
+		body,html{background: #fff;}
+	</style>
+	<body>
+		<!--头部-->
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>个人设置</h1>
+		
+		<div class="ge_li">
+		<a id="language" class="li a">
+			<div class="list_left">
+				<span id="zi">
+					语言选择
+				</span>
+			</div>
+			<span class="xx">中文</span>
+			<i class="iconfont icon-gengduo1"></i>
+		</a>
+		<a id="money" class="li a">
+			<div class="list_left">
+				<span id="zi">
+					货币单位
+				</span>
+			</div>
+			<span class="xx">美元</span>
+			<i class="iconfont icon-gengduo1"></i>
+		</a>
+		<a href=".html" class="li a">
+			<div class="list_left">
+				<span id="zi">
+					清理缓存
+				</span>
+			</div>
+			<span class="xx">274.42k</span>
+			<i class="iconfont icon-gengduo1"></i>
+		</a>
+	</body>
+	<div id="mo">
+			<div class="e_box">
+				<div class="ge">
+					<img src="img/images/cha.png" class="close"/>
+				</div>
+				<div class="zi_buy">
+					英语
+				</div>
+				<div class="zi_buy">
+					中文
+				</div>
+				<div class="zi_buy">
+					繁体
+				</div>
+			</div>
+		</div>
+	<div id="mo1">
+			<div class="e_box">
+				<div class="ge">
+					<img src="img/images/cha.png" class="close1"/>
+				</div>
+				<div class="zi_buy">
+					人民币
+				</div>
+				<div class="zi_buy">
+					美元
+				</div>
+				<div class="zi_buy">
+					港币
+				</div>
+			</div>
+		</div>	
+</html>
+<script type="text/javascript">
+	$("#language").click(function(){
+		$("#mo").css("display","block");
+	})
+	$(".close").click(function(){
+		$("#mo").css("display","none");
+	})
+	
+	$("#money").click(function(){
+		$("#mo1").css("display","block");
+	})
+	$(".close1").click(function(){
+		$("#mo1").css("display","none");
+	})
+	
+	var toggle = true;
+		$(".zi_buy").each(function(i) {
+			$(".zi_buy").click(function() {
+				if(toggle) {
+					$(this).css("color","#157EF4").siblings().css("color","#333333");
+					toggle = false;
+				} else {
+					$(this).css("color","#157EF4").siblings().css("color","#333333");
+					toggle = true;
+				}
+			});
+		});
+</script>

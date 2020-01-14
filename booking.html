@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html ng-app="Mywind">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>记录</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="js/public.js" ></script>
+    <script type="text/javascript" src="js/tab_wo.js" ></script>
+    <script src="js/leftTime.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js" ></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js" ></script>
+	<script type="text/javascript" src="js/angular-relst.js" ></script>
+    <style>
+	.bottom_nav dl dd:nth-child(2) a .dier{display: block !important;}
+	.bottom_nav dl dd:nth-child(2) a .diyi{display: none !important;}
+	.bottom_nav dl dd:nth-child(2) a span{color: #09F4B4;}
+    </style>
+</head>
+<body >
+	
+	<div class="record boking_conter">
+		<div class="booking">
+			<h2>钱包</h2>
+			<div>
+				<a href="aic.html">
+					<p>AIC</p>
+					<h1>1000</h1>
+				</a>
+			</div>
+			<div>
+				<a href="aic.html">
+					<p>AIB</p>
+					<h1>1000</h1>
+				</a>
+			</div>
+			<div>
+				<a href="ai.html">
+					<p>AI机器人账户</p>
+					<h1>1000 USD</h1>
+				</a>
+			</div>
+			<div>
+				<a href="aic.html">
+					<p>总剩余收益账户</p>
+					<h1>1000 USD</h1>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="asset">
+   		<div>
+   			<h3>精选推荐</h3>
+   			<div class="asset_list">
+   				<img src="img/cpc.png"/>
+   				<div class="ass_list_left">
+   					<p>CPC</p>
+   					<p>0.1254 USD</p>
+   				</div>
+   				<div class="ass_list_right">
+   					<p>2121.21 CPC</p>
+   					<p>≈21.21 USD</P>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+   	<div class="asset">
+   		<div>
+   			<h3>链币资产</h3>
+   			<div class="asset_list" onclick="window.location.href = 'eth.html'">
+   				<img src="img/eth.png"/>
+   				<div class="ass_list_left">
+   					<p>ETH</p>
+   					<p>0.1254 USD</p>
+   				</div>
+   				<div class="ass_list_right">
+   					<p>2121.21 ETH</p>
+   					<p>≈21.21 USD</P>
+   				</div>
+   			</div>
+   			<div class="asset_list" style="border-top:1px solid rgba(230, 230, 230, 1)">
+   				<img src="img/usdt.png"/>
+   				<div class="ass_list_left">
+   					<p>USDT</p>
+   					<p>0.1254 USD</p>
+   				</div>
+   				<div class="ass_list_right">
+   					<p>2121.21 USDT</p>
+   					<p>≈21.21 USD</P>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+	
+	<div id="footer"></div>
+	
+	<script>
+	$(".wocao").click(function(){
+            		$("#wowocao").css({"position":"absolute","right":"0px"});
+            	})
+$(function(){
+  $('[js-tab=1]').tab();
+
+});
+function wozhidao(){
+	$(".ymtkg").hide()
+}
+function guizea(){
+	$(".ymtkg").show()
+}
+
+		
+</script>
+
+</body>
+</html>

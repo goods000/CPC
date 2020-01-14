@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<script src="js/swiper.min.js"></script>
+	
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/public.js" ></script>
+	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    	
+    <script src="js/leftTime.min.js"></script>
+
+</head>
+
+<body>
+	<h1 class="h1"><button class="diu iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>积分商城</h1>
+	<div class="container">
+	
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container_sy">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/banner.png"/></div>
+            <div class="swiper-slide"><img src="img/banner.png"/></div>             
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <div class="shipping_nav">
+    	<div>
+    		<i><img src="img/j_1.png"/></i>
+    		<span>积分</span>
+    		<span>5024</span>
+    	</div>
+    	<div onclick="window.location.href = 'shopp_list.html'">
+    		<i><img src="img/j_2.png"/></i>
+    		<span>我的订单</span>
+    	</div>
+    </div>
+   	<div class="content">
+    	<h5>积分兑换</h5>
+    	<dl>
+    		<dd>
+    			<a href="xxy.html">
+	    			<i><img src="img/shop.png"/></i>
+	    			<h6 >山地越野</h6>
+	    			<div>
+	    				<p>9999.99 <u>积分</u></p><span>库存：2121</span>
+	    			</div>
+    			</a>
+    		</dd>
+    		<dd>
+    			<a>
+	    			<i><img src="img/shop.png"/></i>
+	    			<h6 >山地越野</h6>
+	    			<div>
+	    				<p>9999.99 <u>积分</u></p><span>库存：2121</span>
+	    			</div>
+    			</a>
+    		</dd>
+    		<dd>
+    			<a>
+	    			<i><img src="img/shop.png"/></i>
+	    			<h6 >山地越野</h6>
+	    			<div>
+	    				<p>9999.99 <u>积分</u></p><span>库存：2121</span>
+	    			</div>
+    			</a>
+    		</dd>
+    		<dd>
+    			<i><img src="img/shop.png"/></i>
+    			<h6 >山地越野</h6>
+    			<div>
+    				<p>9999.99 <u>积分</u></p><span>库存：2121</span>
+    			</div>
+    		</dd>
+   		
+    	</dl>
+    	
+    </div>
+
+		
+		  
+	</div>
+
+    
+
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        loop: true,
+        autoplay: 3500,
+        autoplayDisableOnInteraction: false
+        
+    });
+    </script>
+
+</body>
+</html>

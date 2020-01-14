@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="Mywind">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>记录</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<script type="text/javascript" src="js/tab_wo.js"></script>
+		<script src="js/leftTime.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="js/angular-relst.js"></script>
+		<style>
+			.tab-title a{width: 50%;display:block;text-align: center;float: left;padding:10px 0;color: #f82838;border:1px solid #f82838;box-sizing: border-box;}
+		    	.tab-title{overflow: hidden;width: 60%;margin: auto;padding: 10px 0;}
+		    	.item-cur{background: #f82838 !important;color: #fff !important;}
+		    	.rrsss{background: #fff;border-bottom: 1px solid #e6e6e6;}
+		   
+		.hang_h1{margin-top: 20px;}
+		.h1{background:url(img/roll.png)  no-repeat #1e2134 !important;color: #fff !important;height: 20vh;background-size:contain !important;border-radius: 0 0 25% 25%;}
+		.h1 button{color: #fff !important;}
+		</style>
+	</head>
+
+	<body>
+		<h1 class="h1"><button class="diu iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>转出CPC</h1>
+
+		<div class="di_mai">
+			<h1 class="hang_h1">转至</h1>
+			<div class="it_inpu">
+				<input type="number" placeholder="请输入转账地址" />
+				<a class="iconfont icon-saoyisao"></a>
+			</div>
+			<h1 class="hang_h1">转出数量</h1>
+			<div class="it_inpu">
+				<input type="number" placeholder="0.00000000" />
+				<a class="zhuanchu">CPC | 全部转出</a>
+				<p><span>可用余额：12.21212121 CPC</span><span>矿工费：0.12% CPC</span></p>
+			</div>
+			<h1 class="hang_h1">备注</h1>
+			<div class="it_inpu">
+				<input type="number" placeholder="备注（选填）" />
+				<p>到账数量：0.00 CPC</p>
+			</div>
+
+			<input class="tiijiao" type="submit" value="立即转出">
+		</div>
+	</body>
+
+</html>

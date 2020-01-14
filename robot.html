@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="Mywind">
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.Spinner.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font.css" />
+	</head>
+
+	<body>
+		<h1 class="h1 index_he" style="position: absolute;background: none;width: 100%;" ><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>机器人购买</h1>
+		<div class="robot_top"><img src="img/robot.png"/></div>
+		
+		<div class="robot">
+			<h1 class="conter_h">购买AI智能机器人</h1>
+			<div class="robot_list">
+				<div class="liis">
+					<input type="radio" class="female" name="sex" />
+					<div class="ro_li">
+						<i><img src="img/j1.png"/></i>
+						<p>A1</p>
+					</div>
+				</div>
+				<div class="liis">
+					<input type="radio" class="female" name="sex" />
+					<div class="ro_li">
+						<i><img src="img/j2.png"/></i>
+						<p>A2</p>
+					</div>
+				</div>
+				<div class="liis">
+					<input type="radio" class="female" name="sex" />
+					<div class="ro_li">
+						<i><img src="img/j3.png"/></i>
+						<p>A3</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="robot_conter">
+			<div class="robto_list">
+				<span>数量</span>
+				<div id="d" class="Spinner"></div>
+			</div>
+			<h2>详情</h2>
+			<div class="robto_list">
+				<span>行业类型</span>
+				<span>衣食住行娱</span>
+			</div>
+			<div class="robto_list">
+				<span>购买金额</span>
+				<span>$100</span>
+			</div>
+			<div class="robto_list">
+				<span>收益率</span>
+				<span>10%-15%</span>
+			</div>
+			<div class="robto_list">
+				<span>收益类型</span>
+				<span>AIC</span>
+			</div>
+			<div onclick="zhifu()" class="robto_list">
+				<span>支付方式</span>
+				<p><img src="img/eth.png"/><u>ETH</u><i class="iconfont icon-xiangshang2"></i></p>
+			</div>
+		</div>
+		<div class="robot_bottom">
+			<p>应付：0.50000000 ETH</p>
+			<a id="pay">立即购买</a>
+		</div>
+		<div class="zhifu">
+			<div class="beij"></div>
+			<div class="fangshi">
+				<h2><span>选择支付方式</span><i onclick="guanbi()" class="iconfont icon-guanbi1"></i></h2>
+				<ul>
+					<li><p><img src="img/eth.png"/><span>ETH</span></p><div><input type="radio" class="rad" name="ss"/><label class="rr"></label></div></li>
+					<li><p><img src="img/usdt.png"/><span>USDT</span></p><div><input type="radio" class="rad" name="ss"/><label class="rr"></label></div></li>
+					<li><p><img src="img/eth.png"/><span>ETH</span></p><div><input type="radio" class="rad" name="ss"/><label class="rr"></label></div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="zhuangtai">
+			<div class="beij"></div>
+			<div class="jieguop">
+				<h2><i><img src="img/zhuangtai.png"/></i><span>购买成功</span></h2>
+				<ul>
+					<li><span>资产类型</span><span>AI服装类资产包</span></li>
+					<li><span>购买金额</span><span>100$</span></li>
+					<li><span>支付金额</span><span>12.12142142 ETH</span></li>
+					<li><span>购买时间</span><span>2019-12-20 18:00</span></li>
+					<li><span>订单编号</span><span>021154865454820</span></li>
+				</ul>
+				<a onclick="fanhui()">返回</a>
+			</div>
+		</div>
+	<script type="text/javascript" src="js/Zcheck.js" ></script>	
+	<script type="text/javascript">
+	function guanbi(){
+				$(".zhifu").hide();
+				
+			}
+		$(function(){
+			$(".beij").click(function(){
+				$(".zhifu").hide();
+				$(".zhuangtai").hide();
+			});
+			
+			$("#d").Spinner();
+		});
+		function zhifu(){
+			$(".zhifu").show(300)
+		}
+		function fanhui(){
+			$(".zhuangtai").hide();
+		}
+	</script>
+	<script>
+    let payPassword = createPayPassword({
+        title:'购买付费',
+        prices:'100',
+        priceUnit:'元',
+        activeDom:'#pay',
+        onInputCompletion(){
+        	$(".maskBox").hide();
+            $(".zhuangtai").show(300);
+        }
+    });
+
+ 
+
+</script>
+	</body>
+
+</html>

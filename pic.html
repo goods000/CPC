@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>个人中心</title>
+		<link rel="stylesheet" href="css/center.css" />
+		<link rel="stylesheet" href="css/font.css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<style type="text/css">
+			#xmTanDiv_1 #xdaTanFileImg_1{width: 105px;height: 100px;}
+			#xmTanDiv_1 form i{width: 100px;height: 100px;}
+		</style>
+	</head>
+	<body>
+		<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+			<span>修改头像</span>
+			<a>保存</a>
+		</h1>
+		<div style="margin: 10% auto;display: flex;justify-content: center;">
+			<div id="xmTanDiv_1" class="touImg">
+				<form>
+					<input type="hidden" id="uploadOrderid" name="id" value="">
+						<input type="file" name="file1" id="xdaTanFileImg_1" onchange="preview(this)" accept="image/*" />
+						<i><img src="img/usdt.png" alt="" id="xmTanImg_1"/></i>
+				</form>
+			</div>
+		</div>
+	<script>
+        $(".wocao").click(function(){
+            $("#wowocao").css({"position":"absolute","right":"0px"});
+        })
+        function preview(file) {
+	        var file = file.files[0];
+			console.log(file);
+			console.log("file.size = " + file.size); //file.size 单位为byte
+			var reader = new FileReader();
+			reader.onload = function (e) {
+			console.log("成功读取....");
+			var size = file.size/1024;
+			var size = size/1024;
+			if (size>4) {
+			alert('上传图片不能超过4MB，请重新选择!');return false;
+			}
+			var img = document.getElementById("xmTanImg_1");
+			img.src = e.target.result;
+			//或者 img.src = this.result; //e.target == this
+			}
+			reader.readAsDataURL(file)
+		}
+    </script>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script src="js/jquery.i18n.properties.min.js"></script>
+<script src="js/language.js"></script>
+</html>

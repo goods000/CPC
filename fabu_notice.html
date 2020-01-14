@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/center.css" />
+		<link rel="stylesheet" href="css/font.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<script src="js/tab_wo.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		.h1{background: none;}
+		body,html{background: #f5f5f5;}
+		.tab-title a{width: 50%;display:block;text-align: center;float: left;padding:5px 0;color: #fff;border:1px solid #FFFFFF;box-sizing: border-box;}
+    	.tab-title{overflow: hidden;width: 90%;margin: auto;padding: 10px 0;}
+    	.item-cur{background: #fff !important;color: #1E2134 !important;}
+    	.rrsss{background: #1E2134;margin-top: -30%;}
+    	.tab-title a:nth-child(1){border-radius: 25px 0 0 25px;}
+    	.tab-title a:nth-child(2){border-radius: 0 25px 25px 0 ;}
+    	.navTitle{color: #333333 !important;font-weight: bold;}
+    	.buy_box{margin-top: 2%;}
+    	.dian_img{width: 35% !important;}
+    	.buy{height: 160px;}
+		</style>
+	</head>
+	<body>
+		<div style="width:100vw;overflow: hidden;">
+			<div class="buy">
+				<h1 class="h1"><button class="iconfont icon-xiangzuo1" onclick="javascript:window.history.back(-1);"></button>
+					<span class="jisu_bt">发布广告</span>
+				</h1>
+			</div>	
+			<div class="tab" js-tab="1">
+				<div class="rrsss">
+					<div class="tab-title">
+						<a href="javascript:;" class="item">我要买</a>
+			  			<a href="javascript:;" class="item">我要卖</a>
+					</div>
+				</div>
+				<div class="dingdan tab-cont">
+					<div class="tab-cont_wrap">
+						<div class="item">
+							<div class="buy_box">
+								<div class="gorup">
+									<span class="zi_bi">
+										<img src="img/images/buy_cpc.png" class="dian_img"/>&nbsp;&nbsp;&nbsp;
+										<span>CPC</span>
+									</span>
+									<span class="xuan"><span>选择币种</span><i class="iconfont icon-gengduo1"></i></span>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										买入数量
+									</span>
+									<input type="number" placeholder="输入买入数量">
+									<span class="order_price1">CPC</span>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										买入单价
+									</span>
+									<input type="number" placeholder="输入买入数量">
+									<span class="order_price1">USDT</span>
+								</div>
+								<p class="yue"><span>可用余额</span>:<span class="yue_s">12.111454545</span>USDT</p>
+								<div class="gorup">
+									<span class="inputTitle">
+										合计
+									</span>
+									<span class="order_price1">
+										<span class="heji"><span class="yue_s">0.000000</span>&nbsp;&nbsp;USDT</span>
+									</span>
+								</div>
+								
+								<a class="tiijiao1" href="#" id="sub" >立即发布</a>
+							</div>
+						</div>	
+						<div class="item">
+							<div class="buy_box">
+								<div class="gorup">
+									<span class="zi_bi">
+										<img src="img/images/buy_cpc.png" class="dian_img"/>&nbsp;&nbsp;&nbsp;
+										<span>CPC</span>
+									</span>
+									<span class="xuan1"><span>选择币种</span><i class="iconfont icon-gengduo1"></i></span>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										卖出数量
+									</span>
+									<input type="number" placeholder="输入卖出数量">
+									<span class="order_price1">CPC</span>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										卖出单价
+									</span>
+									<input type="number" placeholder="输入卖出数量">
+									<span class="order_price1">USDT</span>
+								</div>
+								<div class="gorup">
+									<p class="yue1"><span class="inputTitle">可用余额</span>:<span class="yue_s">12.454545</span>CPC</p>
+									<p class="yue1"><span class="inputTitle">手续费</span>:<span class="yue_s">0.50%</span>CPC</p>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										获得
+									</span>
+									<span class="order_price1">
+										<span class="heji"><span class="yue_s">0.000000</span>&nbsp;&nbsp;USDT</span>
+									</span>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										支付手续费
+									</span>
+									<span class="order_price1">
+										<span>0.50</span>&nbsp;&nbsp;CPC
+									</span>
+								</div>
+								<div class="gorup">
+									<span class="inputTitle">
+										冻结数量
+									</span>
+									<span class="order_price1">
+										<span>100.50</span>&nbsp;&nbsp;CPC
+									</span>
+								</div>
+								<a class="tiijiao1" href="#" id="sub" >立即发布</a>
+							</div>
+						</div>
+					</div>			
+				</div>	
+			</div>		
+		</div>
+	<!--选择币种-->
+	<div id="mo">
+		<div class="e_box">
+			<div class="ge">
+				<span class="biz">选择币种</span>
+				<img src="img/images/cha.png" class="close"/>
+			</div>
+			<div class="bi_buy">
+				<div class="dui_bi">
+					<img src="img/images/cpc.png" class="logo_img"/>
+					<span>
+						CPC
+					</span>
+				</div>
+				<img src="img/images/chioce.png" class="chioce"/>
+			</div>
+			<div class="bi_buy">
+				<div class="dui_bi">
+					<img src="img/images/AIB.png" class="logo_img"/>
+					<span>
+						AIB
+					</span>
+				</div>
+				<img src="img/images/noChoice.png" class="chioce"/>
+			</div>
+			<div class="bi_buy">
+				
+			</div>
+		</div>
+	</div>
+	
+	<div id="mo1">
+		<div class="e_box">
+			<div class="ge">
+				<span class="biz">选择币种</span>
+				<img src="img/images/cha.png" class="close1"/>
+			</div>
+			<div class="ei_buy">
+				<div class="dui_bi">
+					<img src="img/images/cpc.png" class="logo_img"/>
+					<span>
+						CPC
+					</span>
+				</div>
+				<img src="img/images/chioce.png" class="chioce"/>
+			</div>
+			<div class="ei_buy">
+				<div class="dui_bi">
+					<img src="img/images/AIB.png" class="logo_img"/>
+					<span>
+						AIB
+					</span>
+				</div>
+				<img src="img/images/noChoice.png" class="chioce"/>
+			</div>
+			<div class="ei_buy">
+				
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+<script src="js/jquery.i18n.properties.min.js"></script>
+<script src="js/language.js"></script>
+<script src="js/tab_wo.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+	  $('[js-tab=1]').tab();
+	
+	});
+		
+	$(".xuan").click(function(){
+		$("#mo").css("display","block");
+	})
+	$(".close").click(function(){
+		$("#mo").css("display","none");
+	})	
+	
+	$(".xuan1").click(function(){
+		$("#mo1").css("display","block");
+	})
+	$(".close1").click(function(){
+		$("#mo1").css("display","none");
+	})	
+	
+	var toggle = true;
+		$(".bi_buy").each(function() {
+			$(".bi_buy").click(function() {
+				if(toggle) {
+					$(this).find(".chioce").attr("src", "img/images/chioce.png").parent().siblings().find(".chioce").attr("src", "img/images/noChoice.png");
+					$(".value_a").html($(this).find(".dui_bi span p i").html());
+					toggle = false;
+				} else {
+					$(this).find(".chioce").attr("src", "img/images/chioce.png").parent().siblings().find(".chioce").attr("src", "img/images/noChoice.png")
+					toggle = true;
+				}
+			});
+		});
+		
+	var toggle = true;
+		$(".ei_buy").each(function() {
+			$(".ei_buy").click(function() {
+				if(toggle) {
+					$(this).find(".chioce").attr("src", "img/images/chioce.png").parent().siblings().find(".chioce").attr("src", "img/images/noChoice.png");
+					$(".value_a").html($(this).find(".dui_bi span p i").html());
+					toggle = false;
+				} else {
+					$(this).find(".chioce").attr("src", "img/images/chioce.png").parent().siblings().find(".chioce").attr("src", "img/images/noChoice.png")
+					toggle = true;
+				}
+			});
+		});
+</script>
+</html>
